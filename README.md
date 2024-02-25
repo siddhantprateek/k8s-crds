@@ -2,6 +2,7 @@
 
 Requirements:
 - `Kubernetes` (minikube)
+- `KubeVal`
 
 
 ## Setting up 
