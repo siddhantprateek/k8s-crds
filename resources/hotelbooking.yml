@@ -1,0 +1,8 @@
+apiVersion: hotels.com/v1
+kind: HotelBooking 
+metadata: 
+  name: custom-hotel-booking
+spec: 
+  guestfrom: US
+  guestName: Anderson
+  days: 21

@@ -1,0 +1,35 @@
+apiVersion: apiextensions.k8s.io/v1 
+kind: CustomResourceDefinition
+metadata:
+  name: hotelbooking.hotels.com
+spec:
+  scope: Namespaced
+  group: hotels.com 
+  names:
+    kind: HotelBooking 
+    singular: hotelbooking  
+    plural: hotelbookings 
+    shortNames:
+      - hb 
+  versions:
+    - name: v1 
+      served: true 
+      storage: true
+
+      schema:
+        openAPIV3Schema:
+          type: Object
+          properties:
+            spec:
+              type: object 
+              properties: 
+                guestfrom:
+                  type: string 
+                guestName: 
+                  type: string 
+                days:
+                  type: integer
+                  minimum: 1
+                  maximum: 90
+       
+

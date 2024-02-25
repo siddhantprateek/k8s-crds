@@ -1,0 +1,19 @@
+name: Manifest Validation
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to Repository
+        uses: actions/checkout@v2
+      - name: Kubernetes yaml validation by kubeval
+        uses: makocchi-git/actions-k8s-manifests-validate-kubeval@v1.0.1
+        with:
+          files: difinition,resources
+          token: ${{ secrets.GITHUB_TOKEN }}
