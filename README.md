@@ -16,3 +16,5 @@ kubectl apply -f definition/custom-definition.yml
 ```bash
 kubectl apply -f resources/*
 ```
+## Author
+[Siddhant Prateek Mahanayak](https://github.com/siddhantprateek)
